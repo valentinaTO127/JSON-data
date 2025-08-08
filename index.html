@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación de API y JSON</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>¿Qué es una API y JSON?</h1>
+        </header>
+        
+        <section class="explanation">
+            <h2>API (Interfaz de Programación de Aplicaciones)</h2>
+            <p>Una API es como un "mesero" que permite que diferentes aplicaciones se comuniquen entre sí:</p>
+            <ul>
+                <li>Tú (cliente) haces un pedido (solicitud)</li>
+                <li>El mesero (API) lleva tu pedido a la cocina (servidor)</li>
+                <li>El mesero te trae la comida (respuesta)</li>
+            </ul>
+            
+            <h2>JSON (JavaScript Object Notation)</h2>
+            <p>JSON es un formato ligero para intercambiar datos:</p>
+            <ul>
+                <li>Fácil de leer para humanos</li>
+                <li>Fácil de procesar para computadoras</li>
+                <li>Usa pares de "clave": "valor"</li>
+                <li>Soporta objetos {}, arrays [], strings "", números, booleanos (true/false) y null</li>
+            </ul>
+            
+            <div class="json-example">
+                <h3>Ejemplo de objeto JSON:</h3>
+                <pre>
+{
+    "nombre": "Juan",
+    "edad": 30,
+    "esEstudiante": false,
+    "hobbies": ["fútbol", "música", "lectura"],
+    "dirección": {
+        "calle": "Av. Principal",
+        "ciudad": "Bogotá"
+    }
+}
+                </pre>
+            </div>
+        </section>
+        
+        <section class="demo">
+            <h2>Demostración con DummyJSON</h2>
+            <div class="controls">
+                <button id="loadProducts">Cargar Productos</button>
+                <button id="loadUsers">Cargar Usuarios</button>
+                <button id="loadSingleProduct">Cargar Producto Específico</button>
+            </div>
+            
+            <div class="results">
+                <h3>Resultados:</h3>
+                <div id="jsonResult" class="json-display">
+                    <p>Los resultados de la API aparecerán aquí...</p>
+                </div>
+                
+                <div class="access-example">
+                    <h3>Acceso con notación de punto:</h3>
+                    <div class="dot-notation-controls">
+                        <select id="dotNotationPath">
+                            <option value="">Selecciona para acceder...</option>
+                            <!-- Se llenará dinámicamente -->
+                        </select>
+                        <button id="accessData">Acceder</button>
+                    </div>
+                    <div id="dotNotationResult" class="json-display">
+                        <p>El resultado aparecerá aquí...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="explanation">
+            <h3>¿Cómo funciona la notación de punto?</h3>
+            <p>La notación de punto nos permite acceder a propiedades dentro de objetos JSON:</p>
+            <ul>
+                <li><code>datos.productos</code> - Accede a la propiedad "productos" del objeto "datos"</li>
+                <li><code>datos.productos[0]</code> - Accede al primer elemento del array "productos"</li>
+                <li><code>datos.productos[0].nombre</code> - Accede a la propiedad "nombre" del primer producto</li>
+                <li><code>datos.usuarios[2].dirección.ciudad</code> - Accede a la ciudad del tercer usuario</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
