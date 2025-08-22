@@ -89,6 +89,78 @@
         </section>
     </div>
 
-    <script src="script.js"></script>
+
+    <div class="cajaMorral">
+        <h1 id="miMaleta">Morral</h1>
+        <p id="tamano">Tamaño</p>
+        <div id="contenido"></div>
+        <div id="color"></div>
+    </div>
+    <script src="script.js"></script><script>
+        let objetoJSON ={
+            'type': 'mountain bike',
+            'brand': 'Trek',
+            'model': 'Marlin 7',
+            'year': '2021',
+            'features': {
+                'frameMaterial': 'aluminium',
+                'suspension': 'front',
+                'brakes': 'hydaulic disc',
+                'wheelSize': '29 inches'
+            },
+            'pricea': '$2000',
+            'providers': ['BikeShop', 'CycleWorld', ' MountainBikesRUs'],
+            'ensure': [
+                {
+                    'part': 'wheel',
+                    'ensure': [
+                        {'type': 'tire', 'size': '29.3'}
+                    ]
+                }
+            ]
+        }
+
+        let maletaObj = {
+            'tamano': 'mediano',
+            'color': 'purple',
+            'NumeroDeBolsillos': {
+                'laterales': '2',
+                'normales': '2'
+            },
+            'contenido': {
+                'bolsilloGrande': {
+                        'cuadernos': '2',
+                        'almuezo': ['arroz', 'pollo', 'frijoles', 'papa'],
+                        'kitDeBrackets': ['cepillo de dientes', 'cera dental', 'crema dental'],
+                        'cartuchera': ['colores', 'esferos', 'tijeras'],
+                        'kitDeAseo': ['protector', 'desodorante', 'espejo', 'vaselina']
+                    },
+                'bolsilloPequeño': ['protector solar', 'carnet universitario', 'dinero','tarjeta del SITP'],
+                'bolsilloLateralDerecho': 'vacio',
+                'bolsilloLateralDerecho': 'vacio'
+            }
+        }
+        console.log(maletaObj.contenido.bolsilloGrande.cuadernos)
+        
+        document.getElementById('tamano').style.color = maletaObj.color;
+        document.getElementById('miMaleta').style.color = maletaObj.color;
+        document.getElementById('tamano').innerHTML = maletaObj.tamano;
+
+        if(maletaObj.tamano ==  'mediano') {
+            document.getElementById('miMaleta').style.fontSize = '1rem';
+        }else if(maletaObj.tamano ==  'pequeno') {
+            document.getElementById('miMaleta').style.fontSize = '.5rem';
+        }else if(maletaObj.tamano ==  'grande') {
+            document.getElementById('miMaleta').style.fontSize = '2rem';
+        }
+
+    
+
+        document.getElementById('contenido').innerHTML = maletaObj.contenido.bolsilloPequeño.map(item => {
+            return `<p>${item},</p>`
+        }).join('');
+
+
+        </script>
 </body>
 </html>

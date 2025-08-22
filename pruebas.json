@@ -1,70 +1,75 @@
 {
-  "id": 13,
-  "firstName": "Valentina",
-  "lastName": "Torres",
-  "maidenName": "",
-  "age": 17,
-  "gender": "female",
-  "email": "vtorresoro@unbosque.edu.co",
-  "phone": "+49 393-605-6968",
-  "username": "noahh",
-  "password": "noahhpass",
-  "birthDate": "1984-6-5",
-  "image": "https://dummyjson.com/icon/noahh/128",
-  "bloodGroup": "AB+",
-  "height": 188.62,
-  "weight": 69.49,
-  "eyeColor": "Brown",
-  "hair": {
-    "color": "Red",
-    "type": "Curly"
-  },
-  "ip": "169.154.126.57",
-  "address": {
-    "address": "1413 Maple Street",
-    "city": "New York",
-    "state": "North Dakota",
-    "stateCode": "ND",
-    "postalCode": "73696",
-    "coordinates": {
-      "lat": -25.0377,
-      "lng": -151.70469
-    },
-    "country": "United States"
-  },
-  "macAddress": "d4:fe:ae:8f:eb:a3",
-  "university": "New York University (NYU)",
-  "bank": {
-    "cardExpire": "05/26",
-    "cardNumber": "1681772579326385",
-    "cardType": "Discover",
-    "currency": "SEK",
-    "iban": "G4UIZKIQVPJM9D31XQVR1E9Z"
-  },
-  "company": {
-    "department": "Engineering",
-    "name": "Botsford, Marquardt and Roberts",
-    "title": "Database Administrator",
-    "address": {
-      "address": "62 Third Street",
-      "city": "Seattle",
-      "state": "Oregon",
-      "stateCode": "OR",
-      "postalCode": "83474",
-      "coordinates": {
-        "lat": 19.490447,
-        "lng": -13.173207
-      },
-      "country": "United States"
+  "id": "series-1",
+  "title": "Mirada oscura",
+  "summary": "Karen chica es acosada por hombres. ",
+  "seasons": [
+    {
+      "id": "season-1",
+      "title": "Season 1",
+      "summary": "Karen es acosada por hombres. ",
+      "episodes": [
+        {
+          "id": "s1-ep1",
+          "title": "Episode 1: Mirada oscura parte I",
+          "summary": "Karen sale de la universidad, va a un restaurante y luego a la parada del bus de regreso a casa, sin embargo, durante estas tres ocasiones diferentes hombres la acosan de maneras diferentes y no hay nadie que la ayude.",
+          "scenes": [
+            {
+              "title": "Scene 1: Salida",
+              "summary": "La chica va saliendo de la universidad cuando un chico la mira de manera acosadora.",
+              "id": "e3e9c614-2ccd-40f1-b553-3d0ff9ee2c48",
+              "Personajes": "Chico de la universidad, Karen",
+              "locacion": "Universidad"
+            },
+            {
+              "title": "Scene 2: Restaurante",
+              "summary": "Cuando Karen esta en el restaurante se encuentra con un viejo que le toca inapropiadamente la pierna.",
+              "id": "daa9e1df-de7b-4cc6-a163-eecd72049a7f",
+              "Personajes": "Karen, viejo, bar tender",
+              "locacion": "Restaurante"
+            },
+            {
+              "title": "Scene 3: Baño",
+              "summary": "Karen luego de ser acosada por un viejo, va al baño con el propósito de calmarse. Al salir del baño una chica la mira de forma juzgativa por la ropa que esta usando.",
+              "id": "b15a7a2f-c58c-4bb7-8604-bf38e3bfa58d",
+              "Personajes": "Karen, chica desconocida",
+              "locacion": "Baño del restaurante"
+            },
+            {
+              "title": "Scene 4: Calle",
+              "summary": "Karen decide irse del restaurante debido al suceso de eventos de ese día. Al dirigirse a la parada del bus un ciclista que va pasando por el camino le lanza un comentario inapropiado.",
+              "id": "c60f3bc3-6343-4a21-af38-53281811c60b",
+              "Personajes": "Karen, ciclista",
+              "locacion": "Calle"
+            },
+            {
+              "title": "Scene 5: Parada del bus",
+              "summary": "Al llegar a la parada del bus un chico con un perro se acerca a ella inapropiadamente.",
+              "id": "ebd48573-81c4-4ce7-8995-966da3f90a60",
+              "Personajes": "Karen, chico con el perro",
+              "locacion": "Parada del bus"
+            }
+          ],
+          "Personajes": "Karen, chico de la universidad, viejo, ciclista, bar tender, chico con mascota.",
+          "Locaciones": "Parada del bus, calle, restaurante, universidad, baño.",
+          "Duración": "~3Min"
+        },
+        {
+          "id": "s1-ep2",
+          "title": "Episode 2",
+          "summary": "En proceso...",
+          "scenes": [
+            {
+              "id": "s1-e2-sc1",
+              "title": "Scene 1:",
+              "summary": "En proceso..."
+            }
+          ]
+        }
+      ],
+      "Personajes": "Karen, chico de la universidad, viejo, ciclista, bar tender, chico con mascota.",
+      "Locaciones": "Parada del bus, calle, restaurante, universidad, baño."
     }
-  },
-  "ein": "877-628",
-  "ssn": "660-847-389",
-  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
-  "crypto": {
-    "coin": "Bitcoin",
-    "wallet": "0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a",
-    "network": "Ethereum (ERC20)"
-  },
-  "role": "moderator"
+  ],
+    "Personajes": "Karen, chico de la universidad, viejo, ciclista, bar tender, chico con mascota.",
+    "Locaciones": "Parada del bus, calle, restaurante, universidad, baño."
 }

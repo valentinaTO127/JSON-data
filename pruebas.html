@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta JSON</title>
+</head>
+<body>
+    <div id="locacion"></div>
+
+    <ul id="locacion2"></ul>
+
+    <script>
+        let jsonData; 
+
+        fetch('pruebas.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.seasons[0].episodes[0].scenes[0].locacion);
+            jsonData = data; 
+            mostrarTrama(); 
+            mostrarLista()
+        });
+
+        function mostrarTrama(){
+            if (jsonData) {
+                document.getElementById("locacion").innerHTML = jsonData.seasons[0].episodes[0].scenes[1].locacion;
+            }
+        }
+
+        function mostrarLista(){
+            if (jsonData) {
+                jsonData.seasons[0].episodes[0].scenes.forEach(sce => {
+                const newP = document.createElement('li');
+                newP.textContent = sce.locacion;
+                document.getElementById("locacion2").appendChild(newP);
+            });
+            }
+        }
+    </script>
+</body>
+</html>
+ 
